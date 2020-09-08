@@ -1,1 +1,1 @@
-## This is a POC project to demonstrate the Microservices Arcitecture deployment with Sprig Boot and Spring Cloud
+# This is a POC project for the demonstration of Microservice Architecture with Sprig Boot and Spring Cloud
