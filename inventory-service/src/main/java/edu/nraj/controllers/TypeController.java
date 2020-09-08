@@ -1,6 +1,8 @@
 package edu.nraj.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,22 +13,11 @@ import edu.nraj.repositories.TypeRepo;
 public class TypeController {
 	
 	@Autowired
-	private TypeRepo trepo;
+	private TypeRepo typeRepo;
 	
-	@RequestMapping("/")
-	public void saveType() {
-		Types type = new Types();
-		
-		type.setName("Fridge");
-		type.setTypeId("wertyu-345678-dfgh678945fgh67");
-		
-		try {
-			Types tp = trepo.save(type);
-			System.out.println(tp.getId());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+	@GetMapping("/types/{name}")
+	public Types saveType(@PathVariable(name = "name") String name) {
+		return typeRepo.findByName(name);		
 	}
 
 }

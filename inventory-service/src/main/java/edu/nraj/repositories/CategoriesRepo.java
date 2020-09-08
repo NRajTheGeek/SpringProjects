@@ -3,10 +3,9 @@ package edu.nraj.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import edu.nraj.entities.Types;
+import edu.nraj.entities.Categories;
 
 @Repository
-public interface TypeRepo extends JpaRepository<Types, Integer> {
-	
-	public Types findByName(String name);
+public interface CategoriesRepo extends JpaRepository<Categories, Integer> {
+
 }
