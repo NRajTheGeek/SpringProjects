@@ -3,9 +3,9 @@ package edu.nraj.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import edu.nraj.entities.Sellers;
+import edu.nraj.models.Category;
 
 @Repository
-public interface SellersRepo extends JpaRepository<Sellers, Integer> {
+public interface CategoryRepo extends JpaRepository<Category, Integer> {
 
 }
